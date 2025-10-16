@@ -7,8 +7,9 @@ SELECT * FROM infectious_cases;
 -- Створення таблиці країн
 CREATE TABLE countries(
     id INT PRIMARY KEY AUTO_INCREMENT,
-    code VARCHAR(8) UNIQUE,
-    country VARCHAR(32) NOT NULL UNIQUE
+    code VARCHAR(8),
+    country VARCHAR(64) NOT NULL,
+    UNIQUE (code, country)
 );
 
 -- Заповнення країнами та кодами з infectious_cases
